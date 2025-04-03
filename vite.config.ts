@@ -2,7 +2,7 @@
  * @Author: 
  * @Date: 2024-07-12 15:59:27
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2025-03-11 14:26:19
+ * @LastEditTime: 2025-04-03 16:25:30
  * @FilePath: \vite-app\vite.config.ts
  * @Description: 
  * 
@@ -13,7 +13,7 @@ import * as path from 'path'
 import { viteMockServe  } from 'vite-plugin-mock'
 import AutoImport from 'unplugin-auto-import/vite' // 自动导入插件
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
-import { fileURLToPath } from 'url'
+// import { fileURLToPath } from 'url'
 // 准备设置element-plus按需导入 - styleImport 报错
 // import styleImport from 'vite-plugin-style-import'
 // import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
@@ -23,11 +23,11 @@ export default defineConfig({
   plugins: [
     vue(),
     viteMockServe({
-      mockPath: './src/mock/source', // 解析indexts的位置
+      mockPath: './src/mock/source', // 解析indexTs的位置
       localEnabled: true // 是否开启开发环境
     }),
     AutoImport({
-      // Auto import funciton from Vue, e.g ref, reacitve, useRoute...
+      // Auto import function from Vue, e.g ref, reactive, useRoute...
       imports: ['vue', 'vue-router'],
       resolvers:[],
       // 声明文件生成位置喝名称
@@ -36,7 +36,7 @@ export default defineConfig({
     createSvgIconsPlugin({
       // 指定需要缓存得图标文件夹
       iconDirs: [path.resolve(process.cwd(), './src/assets/icons')],
-      // 指定synbolId格式
+      // 指定symbolId格式
       symbolId: 'icon-[dir]-[name]'
     })
     // styleImport({
@@ -62,16 +62,17 @@ export default defineConfig({
   resolve: {
     // 配置路劲别名
     alias: {
-      // '@': path.resolve(__dirname, './src'), // 方法1
-      '@': fileURLToPath(new URL('./src', import.meta.url)), // 方法2
+      '@': path.resolve(__dirname, './src'), // 方法1
+      // '@': fileURLToPath(new URL('./src', import.meta.url)), // 方法2
     }
   },
   css: {
     // css预处理器
     preprocessorOptions: {
       scss: {
-        additionalData: 
-          `@import "@/assets/css/global.scss";`
+        additionalData:
+          // 使用@use代替原来的@import 
+          `@use "@/assets/css/global.scss" as *;`
       }
     }
   },
