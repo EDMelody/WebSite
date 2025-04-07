@@ -27,7 +27,7 @@ type RouteRecordRawConfig = RouteRecordRaw & {
 const routes: RouteRecordRawConfig[] = [
   {
     path: '/',
-    redirect: '/index-css',
+    redirect: '/main-index',
     meta: { title: '', type: '', icon: '', index: 0 }
   },
   {
@@ -36,9 +36,9 @@ const routes: RouteRecordRawConfig[] = [
     meta: { title: '', type: '', icon: '', index: 1 },
     component: () => import("@/pages/home/index.vue"),
     children: [
-      ...threeRouter, // three.js
-      ...mainRouter, // css特效样式
-    ]
+      ...threeRouter, // three
+      ...mainRouter, // main
+    ] as []
   }
 ]
 const router = createRouter({

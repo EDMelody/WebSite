@@ -8,7 +8,7 @@
  * 
 -->
 <template>
-  <div class="three-page">
+  <div class="main-page">
     <el-menu
       :default-active="activeName"
       class="el-menu-vertical-demo"
@@ -48,11 +48,15 @@ const props = defineProps({
   collapse: Boolean,
   metaInfo: Object,
 })
+// setting default value
 const defaultMetaInfo = {
   type: 'main',
   index: 3
 }
-const isCollapse = computed(() => props.collapse || false)
+const defaultCollapse = false
+// ----
+
+const isCollapse = computed(() => props.collapse || defaultCollapse)
 
 const menuList = route.getRoutes().filter((item: RouteRecordRaw) => item.meta?.type === (props.metaInfo?.type || defaultMetaInfo.type) && item.meta?.index === (props.metaInfo?.index || defaultMetaInfo.index))
 
@@ -68,7 +72,7 @@ const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
 
-// 路由切换页面跳转
+// change routerPage event
 const handleChangeRoute = (key:string, keyPath: string[]) => {
   activeName.value = key
   route.push({name: key})
@@ -79,7 +83,7 @@ const handleChangeRoute = (key:string, keyPath: string[]) => {
 .active-link{
   color: red;
 }
-.three-page{
+.main-page{
   width: 100%;
   height: 100vh;
   background: rgba(0,0,0, 0.1);
