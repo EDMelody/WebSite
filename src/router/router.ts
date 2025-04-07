@@ -11,11 +11,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 // three.js 路由合集
 import threeRouter from "./threeRouter";
-// css 路由合集
-import cssRouter from "./cssRouter";
-// echarts 路由合集
-import echartsRouter from "./echartsRouter";
-
+// main 路由合集
+import mainRouter from "./mainRouter";
 // 定义了一个类型用来扩展RouteRecordRaw类型
 type RouteRecordRawConfig = RouteRecordRaw & {
   meta: {
@@ -40,8 +37,7 @@ const routes: RouteRecordRawConfig[] = [
     component: () => import("@/pages/home/index.vue"),
     children: [
       ...threeRouter, // three.js
-      ...cssRouter, // css特效样式
-      ...echartsRouter // echarts.js
+      ...mainRouter, // css特效样式
     ]
   }
 ]

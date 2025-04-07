@@ -23,18 +23,13 @@ const menuState = reactive({
 })
 const tabList = reactive([
   {
-    name: 'css',
-    path: 'index-css',
-    show: 'Y'
-  },
-  {
     name: 'three',
     path: 'three-model',
     show: 'Y'
   },
   {
-    name: 'echarts',
-    path: 'index-echarts',
+    name: 'main',
+    path: 'index-main',
     show: 'Y'
   }
 ])
