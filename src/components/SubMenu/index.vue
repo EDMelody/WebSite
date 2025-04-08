@@ -58,7 +58,12 @@ const defaultCollapse = false
 
 const isCollapse = computed(() => props.collapse || defaultCollapse)
 
-const menuList = route.getRoutes().filter((item: RouteRecordRaw) => item.meta?.type === (props.metaInfo?.type || defaultMetaInfo.type) && item.meta?.index === (props.metaInfo?.index || defaultMetaInfo.index))
+console.log(route.getRoutes())
+let menuList = route.getRoutes().filter((item: RouteRecordRaw) => item.meta?.type === (props.metaInfo?.type || defaultMetaInfo.type) && item.meta?.index === (props.metaInfo?.index || defaultMetaInfo.index))
+console.log(menuList)
+if (menuList.length > 0) {
+  menuList = menuList.sort((a, b) => a.meta.sort - b.meta?.sort)
+}
 
 onMounted(() => {
   // console.log(route.getRoutes());

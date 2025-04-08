@@ -17,10 +17,17 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // 准备设置element-plus按需导入 - styleImport 报错
 // import styleImport from 'vite-plugin-style-import'
 // import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
+import VueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    VueRouter({
+      dirs: ['./src/pages'], // 默认扫描的目录，您可以自定义
+      dts: './src/typed-router.d.ts', // 自动生成类型声明文件
+    }),
+    // ⚠️ Vue must be placed after VueRouter()
     vue(),
     viteMockServe({
       mockPath: './src/mock/source', // 解析indexTs的位置
@@ -28,7 +35,11 @@ export default defineConfig({
     }),
     AutoImport({
       // Auto import function from Vue, e.g ref, reactive, useRoute...
-      imports: ['vue', 'vue-router'],
+      imports: [
+        'vue',
+        // 'vue-router',
+        VueRouterAutoImports
+      ],
       resolvers:[],
       // 声明文件生成位置喝名称
       dts: './auto-import.d.ts'

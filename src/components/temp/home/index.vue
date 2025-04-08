@@ -3,11 +3,12 @@
   describe: 默认router第一个，包含菜单
 -->
 <template>
-  <div :class="`${menuState.show ? 'fixd-menu' : 'menu-tab'} menu`" @click="changeMenuEvent">
+  测试2
+  <!-- <div :class="`${menuState.show ? 'fixd-menu' : 'menu-tab'} menu`" @click="changeMenuEvent">
     <span v-show="menuState.show">{{ menuState.title }}</span>
     <div v-show="!menuState.show" v-for="(item, index) in tabList.filter(i => i.show === 'Y')" :key="index" @click.stop="changeMenuListEvent(item)">{{ item.name }}</div>
   </div>
-  <router-view></router-view>
+  <router-view></router-view> -->
 </template>
 
 <script setup lang="ts">
