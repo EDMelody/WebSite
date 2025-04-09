@@ -2,7 +2,7 @@
  * @Author: 
  * @Date: 2025-04-03 17:26:11
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2025-04-03 18:03:56
+ * @LastEditTime: 2025-04-09 11:17:18
  * @FilePath: \vite-app\src\components\SubMenu\index.vue
  * @Description: 侧边栏组件
  * 
@@ -38,8 +38,7 @@
 </template>
 
 <script setup lang='ts'>
-
-import { RouteRecordRaw } from 'vue-router';
+import { RouteRecordRaw } from 'vue-router'
 
 const route = useRouter()
 // let isCollapse = ref<boolean>(false)
@@ -59,10 +58,11 @@ const defaultCollapse = false
 const isCollapse = computed(() => props.collapse || defaultCollapse)
 
 console.log(route.getRoutes())
+console.log('???')
 let menuList = route.getRoutes().filter((item: RouteRecordRaw) => item.meta?.type === (props.metaInfo?.type || defaultMetaInfo.type) && item.meta?.index === (props.metaInfo?.index || defaultMetaInfo.index))
 console.log(menuList)
 if (menuList.length > 0) {
-  menuList = menuList.sort((a, b) => a.meta.sort - b.meta?.sort)
+  menuList = menuList.sort((a, b) => a.meta.sort - b.meta.sort)
 }
 
 onMounted(() => {

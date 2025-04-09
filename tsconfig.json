@@ -22,7 +22,9 @@
       "@/*": ["src/*"]
     },
     "types": [
-      "unplugin-vue-router/client"
+      "unplugin-vue-router/client",
+      "vite/client",
+      "vue"
     ]
   },
   "include": [
