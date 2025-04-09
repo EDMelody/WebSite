@@ -14,8 +14,7 @@
 </route>
 
 <template>
-    1
-    <!-- 1page-tools -->
+    1page-tools
 </template>
 
 <script setup lang='ts'>
