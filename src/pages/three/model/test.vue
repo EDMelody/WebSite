@@ -1,3 +1,9 @@
+<route lang="yaml">
+  meta:
+      type:
+      title: 1
+</route>
+
 <template>
   <div class="box">
     <div class="btn-box">

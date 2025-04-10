@@ -10,7 +10,11 @@
 -->
 <template>
   <div>
-    <SubMenu :metaInfo="metaInfo" :collapse="collapse"></SubMenu>
+    <SubMenu :metaInfo="metaInfo" :collapse="collapse">
+      <template v-slot:content>
+        <RouterView></RouterView>
+      </template>
+    </SubMenu>
   </div>
 </template>
 

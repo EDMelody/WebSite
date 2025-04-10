@@ -8,10 +8,14 @@
  * 
  * Copyright (c) 2023 by 2274333402@qq.com, All Rights Reserved. 
 -->
+<route lang="yaml">
+meta:
+  type: three
+  index: 3
+  title: model
+</route>
 <template>
-  <div id="modelpage">
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script setup lang='ts'>
@@ -22,8 +26,5 @@ onMounted(() => {
 </script>
 
 <style scope lang='scss'>
-#modelpage{
-  width: 100%;
-  height: 100%;
-}
+
 </style>

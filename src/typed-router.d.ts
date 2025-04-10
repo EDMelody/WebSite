@@ -19,15 +19,15 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
-    '/main/dashboard': RouteRecordInfo<'/main/dashboard', '/main/dashboard', Record<never, never>, Record<never, never>>,
-    '/main/dashboard/duyi': RouteRecordInfo<'/main/dashboard/duyi', '/main/dashboard/duyi', Record<never, never>, Record<never, never>>,
-    '/main/dashboard/duyi/1': RouteRecordInfo<'/main/dashboard/duyi/1', '/main/dashboard/duyi/1', Record<never, never>, Record<never, never>>,
-    '/main/dashboard/homepage': RouteRecordInfo<'/main/dashboard/homepage', '/main/dashboard/homepage', Record<never, never>, Record<never, never>>,
-    '/main/dashboard/tools': RouteRecordInfo<'/main/dashboard/tools', '/main/dashboard/tools', Record<never, never>, Record<never, never>>,
-    '/main/dashboard/tools/1': RouteRecordInfo<'/main/dashboard/tools/1', '/main/dashboard/tools/1', Record<never, never>, Record<never, never>>,
-    '/three/': RouteRecordInfo<'/three/', '/three', Record<never, never>, Record<never, never>>,
-    '/three//': RouteRecordInfo<'/three//', '/three', Record<never, never>, Record<never, never>>,
-    '/three/model/model': RouteRecordInfo<'/three/model/model', '/three/model/model', Record<never, never>, Record<never, never>>,
-    '/three/model/test/test': RouteRecordInfo<'/three/model/test/test', '/three/model/test/test', Record<never, never>, Record<never, never>>,
+    '/main': RouteRecordInfo<'/main', '/main', Record<never, never>, Record<never, never>>,
+    '/main/duyi': RouteRecordInfo<'/main/duyi', '/main/duyi', Record<never, never>, Record<never, never>>,
+    '/main/duyi/1': RouteRecordInfo<'/main/duyi/1', '/main/duyi/1', Record<never, never>, Record<never, never>>,
+    '/main/homepage': RouteRecordInfo<'/main/homepage', '/main/homepage', Record<never, never>, Record<never, never>>,
+    '/main/tools': RouteRecordInfo<'/main/tools', '/main/tools', Record<never, never>, Record<never, never>>,
+    '/main/tools/1': RouteRecordInfo<'/main/tools/1', '/main/tools/1', Record<never, never>, Record<never, never>>,
+    '/three': RouteRecordInfo<'/three', '/three', Record<never, never>, Record<never, never>>,
+    '/three/homepage/': RouteRecordInfo<'/three/homepage/', '/three/homepage', Record<never, never>, Record<never, never>>,
+    '/three/model': RouteRecordInfo<'/three/model', '/three/model', Record<never, never>, Record<never, never>>,
+    '/three/model/test': RouteRecordInfo<'/three/model/test', '/three/model/test', Record<never, never>, Record<never, never>>,
   }
 }

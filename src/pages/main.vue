@@ -16,7 +16,11 @@
 
 <template>
   <div>
-    <SubMenu></SubMenu>
+    <SubMenu>
+      <template v-slot:content>
+        <RouterView></RouterView>
+      </template>
+    </SubMenu>
   </div>
 </template>
 

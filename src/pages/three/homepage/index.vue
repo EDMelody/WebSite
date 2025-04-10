@@ -7,6 +7,12 @@
  * @Description: 
  * 
 -->
+<route lang="yaml">
+meta:
+  type: three
+  index: 3
+  title: dashboard
+</route>
 <template>
   <div>
     <el-button @click="onSubmit">按钮</el-button>

@@ -32,7 +32,7 @@
       </template>
     </el-menu>
     <div class="page-main-body" :style="`width: calc(100% - ${isCollapse ? '56' : '200'}px);`">
-      <RouterView></RouterView>
+      <slot name="content"></slot>
     </div>
   </div>
 </template>
