@@ -10,7 +10,7 @@
 <route lang="yaml">
     meta:
         type:
-        title: 1
+        title: 二维码生成
 </route>
 
 <template>
@@ -18,6 +18,9 @@
 </template>
 
 <script setup lang='ts'>
+import { generateCode } from './generateQrCode.js'
+
+generateCode()
 </script>
 
 <style scope lang='scss'>

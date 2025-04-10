@@ -24,7 +24,7 @@ declare module 'vue-router/auto-routes' {
     '/main/duyi/1': RouteRecordInfo<'/main/duyi/1', '/main/duyi/1', Record<never, never>, Record<never, never>>,
     '/main/homepage': RouteRecordInfo<'/main/homepage', '/main/homepage', Record<never, never>, Record<never, never>>,
     '/main/tools': RouteRecordInfo<'/main/tools', '/main/tools', Record<never, never>, Record<never, never>>,
-    '/main/tools/1': RouteRecordInfo<'/main/tools/1', '/main/tools/1', Record<never, never>, Record<never, never>>,
+    '/main/tools/generateQrcode': RouteRecordInfo<'/main/tools/generateQrcode', '/main/tools/generateQrcode', Record<never, never>, Record<never, never>>,
     '/three': RouteRecordInfo<'/three', '/three', Record<never, never>, Record<never, never>>,
     '/three/homepage/': RouteRecordInfo<'/three/homepage/', '/three/homepage', Record<never, never>, Record<never, never>>,
     '/three/model': RouteRecordInfo<'/three/model', '/three/model', Record<never, never>, Record<never, never>>,
