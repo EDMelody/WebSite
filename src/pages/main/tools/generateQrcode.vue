@@ -1,9 +1,9 @@
 <!--
  * @Author: 
  * @Date: 2025-04-09 09:12:45
- * @LastEditors: 
- * @LastEditTime: 2025-04-09 10:46:50
- * @FilePath: \vite-app\src\pages\main\dashboard\tools\1.vue
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2025-04-11 17:15:11
+ * @FilePath: \vite-app\src\pages\main\tools\generateQrcode.vue
  * @Description: 
  * 
 -->
@@ -18,9 +18,9 @@
 </template>
 
 <script setup lang='ts'>
-import { generateCode } from './generateQrCode.js'
+// import { generateCode } from './generateQrCode.js'
 
-generateCode()
+// generateCode()
 </script>
 
 <style scope lang='scss'>

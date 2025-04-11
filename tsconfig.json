@@ -8,7 +8,7 @@
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
-    "resolveJsonModule": true,
+    // "resolveJsonModule": true,
     // "allowJs": true,
     // "noImplicitAny": false,
     // declaration用来指定是否在编译的时候生成相的d.ts声明文件，如果设为true,编译每个ts文件之后会生成一个js文件和一个声明文件，但是declaration和allowJs不能同时设为true
