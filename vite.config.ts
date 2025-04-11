@@ -2,7 +2,7 @@
  * @Author: 
  * @Date: 2024-07-12 15:59:27
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2025-04-11 17:26:15
+ * @LastEditTime: 2025-04-11 17:48:08
  * @FilePath: \vite-app\vite.config.ts
  * @Description: 
  * 
@@ -24,7 +24,7 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 export default defineConfig(({ command }) => {
   const isDev = command === 'serve'
   return {
-    base: 'https://edmelody.github.io/WebSite/',
+    base: '/WebSite/',
     plugins: [
       VueRouter({
         dirs: ['./src/pages'], // 默认扫描的目录，您可以自定义
