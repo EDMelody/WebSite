@@ -24,7 +24,8 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 export default defineConfig(({ command }) => {
   const isDev = command === 'serve'
   return {
-    base: isDev ? '' : '/WebSite/',
+    base: '/WebSite/',
+    // base: isDev ? '' : '/WebSite/',
     plugins: [
       VueRouter({
         dirs: ['./src/pages'], // 默认扫描的目录，您可以自定义
