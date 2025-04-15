@@ -1,0 +1,1 @@
+import{d as t,o as n,c as r,a,b as s,e as d,r as _}from"./index-CHw0CTV0.js";const c={id:"modelpage"},u=t({__name:"index",setup(p){return n(()=>{}),(i,e)=>{const o=_("router-view");return a(),r("div",c,[e[0]||(e[0]=s(" herePage ")),d(o)])}}});export{u as default};

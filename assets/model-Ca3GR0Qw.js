@@ -1,0 +1,1 @@
+import{d as t,o as n,f as r,a,r as s}from"./index-CHw0CTV0.js";import{b as o}from"./route-block-B_A1xBdJ.js";const c=t({__name:"model",setup(p){return n(()=>{}),(_,m)=>{const e=s("router-view");return a(),r(e)}}});typeof o=="function"&&o(c);export{c as default};
