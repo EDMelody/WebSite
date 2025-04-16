@@ -4,6 +4,7 @@
         index: 3
         title: 首页
         sort: 1
+        icon: Watermelon
 </route>
 
 <template>

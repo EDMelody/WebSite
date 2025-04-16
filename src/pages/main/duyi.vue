@@ -4,6 +4,7 @@
         index: 3
         title: DuyiDemo
         sort: 3
+        icon: Pear
 </route>
 
 <template>

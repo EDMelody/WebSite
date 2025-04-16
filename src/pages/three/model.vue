@@ -13,6 +13,7 @@ meta:
   type: three
   index: 3
   title: model
+  icon: Monitor
 </route>
 <template>
   <router-view></router-view>

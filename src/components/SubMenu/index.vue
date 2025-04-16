@@ -19,14 +19,24 @@
     >
       <template  v-for="route in menuList" :key="route.path">
         <el-menu-item  :index="route.name" v-if="route.children.length === 0">
-          <span v-bind:class="{ 'active-link': activeName === route.name }" >{{ route.meta.title }}</span>
+          <el-icon>
+          <!-- 使用动态组件加载图标 -->
+            <component :is="route.meta.icon ? `${route.meta.icon}` : 'Menu'" />
+          </el-icon>
+          <template #title>{{ route.meta.title }}</template>
         </el-menu-item>
         <el-sub-menu :index="route.name" v-else>
           <template #title>
+            <el-icon>
+              <component :is="route.meta.icon ? `${route.meta.icon}` : 'Menu'" />
+            </el-icon>
             <span>{{ route.meta.title }}</span>
           </template>
           <el-menu-item :index="routeChild.name" v-for="routeChild in route.children" :key="routeChild.path">
-            <span v-bind:class="{ 'active-link': activeName === routeChild.name }" >{{ routeChild.meta?.title }}</span>
+            <el-icon>
+              <component :is="routeChild.meta.icon ? `${route.meta.icon}` : ''" />
+            </el-icon>
+            <template #title>{{ routeChild.meta.title }}</template>
           </el-menu-item>
         </el-sub-menu>
       </template>
@@ -52,7 +62,7 @@ const defaultMetaInfo = {
   type: 'main',
   index: 3
 }
-const defaultCollapse = false
+const defaultCollapse = true
 // ----
 
 const isCollapse = computed(() => props.collapse || defaultCollapse)
@@ -85,9 +95,6 @@ const handleChangeRoute = (key:string, keyPath: string[]) => {
 </script>
 
 <style scope lang='scss'>
-.active-link{
-  color: red;
-}
 .main-page{
   width: 100%;
   height: 100vh;

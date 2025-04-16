@@ -12,6 +12,7 @@ meta:
   type: three
   index: 3
   title: dashboard
+  icon: House
 </route>
 <template>
   <div>

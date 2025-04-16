@@ -13,6 +13,7 @@
         index: 3
         title: 实用小工具
         sort: 2
+        icon: Present
 </route>
 
 <template>
