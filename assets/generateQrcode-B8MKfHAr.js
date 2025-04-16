@@ -1,1 +1,0 @@
-import{d as o}from"./index-DQEvcSbm.js";import{b as e}from"./route-block-B_A1xBdJ.js";const t=o({__name:"generateQrcode",setup(r){return(n,a)=>" 1page-tools "}});typeof e=="function"&&e(t);export{t as default};
