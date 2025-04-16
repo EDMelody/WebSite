@@ -1,0 +1,1 @@
+import{b as o}from"./route-block-B_A1xBdJ.js";import{_ as t}from"./index-DQEvcSbm.js";const r={};function c(e,f){return" 1page "}typeof o=="function"&&o(r);const s=t(r,[["render",c]]);export{s as default};
