@@ -1,0 +1,1 @@
+import{b as o}from"./route-block-B_A1xBdJ.js";import{_ as r}from"./index-DiOMxrpX.js";const e={};function t(c,f){return" 首页-空空如也没想好写啥 "}typeof o=="function"&&o(e);const s=r(e,[["render",t]]);export{s as default};
