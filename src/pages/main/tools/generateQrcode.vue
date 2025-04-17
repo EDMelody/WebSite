@@ -14,7 +14,12 @@
 </route>
 
 <template>
-    1page-tools
+    <div class="m-padding">
+        <div class="main-body">
+            <div class="textarea"></div>
+            <div class="output-pic"></div>
+        </div>
+    </div>
 </template>
 
 <script setup lang='ts'>
@@ -24,5 +29,20 @@
 </script>
 
 <style scope lang='scss'>
-
+.main-body{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 48px;
+    width: auto;
+    transition: .6s all cubic-bezier(.4,0,.2,1);
+    height: 250px;
+    // border: 1px solid;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 12px;
+    .textarea, .output-pic{
+        flex: 1;
+        border: 1px solid #000;
+    }
+}
 </style>

@@ -17,7 +17,9 @@
 </route>
 
 <template>
-    <router-view></router-view>
+    <div class="fillPage">
+        <router-view></router-view>
+    </div>
 </template>
 
 <script setup lang='ts'>

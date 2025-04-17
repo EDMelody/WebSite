@@ -8,7 +8,7 @@
 </route>
 
 <template>
-    首页
+    首页-空空如也没想好写啥
 </template>
 
 <script setup lang='ts'>

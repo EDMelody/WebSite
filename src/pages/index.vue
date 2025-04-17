@@ -24,8 +24,8 @@
 const route = useRouter()
 // console.log(route.getRoutes())
 const menu = ref([
-  { title: '渡一Demo', routePath: '/main/duyi/1' },
-  { title: 'three', routePath: '/three/homepage' },
+  { title: 'main模块', routePath: '/main/homepage' },
+  { title: 'three模块', routePath: '/three/homepage' },
 ])
 onMounted(() => {
 })
@@ -41,18 +41,15 @@ const clickMenuEvent = (i) => {
   height: 100vh;
 }
 .section{
-  width: 50%;
-  max-width: 300px;
-  // height: 350px;
-  height: 300px;
-  border: 1px solid;
+  width: 80%;
+  height: 90%;
   background: #fff;
-  display: flex;
+  @extend .dcc;
   padding: 10px;
 }
 .menu-item{
-  width: 100px;
-  height: 100px;
+  width: 40%;
+  height: 50%;
   border: 1px solid #000;
   margin-right: 10px;
   @extend .dcc;
