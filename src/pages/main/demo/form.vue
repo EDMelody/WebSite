@@ -1,7 +1,7 @@
 <route lang="yaml">
     meta:
-        type:
-        title: 1
+        type: 
+        title: 动态表单
 </route>
 
 <template>

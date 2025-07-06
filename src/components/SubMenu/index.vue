@@ -30,7 +30,7 @@
             <el-icon>
               <component :is="route.meta.icon ? `${route.meta.icon}` : 'Menu'" />
             </el-icon>
-            <span>{{ route.meta.title }}</span>
+            <span>{{ route.meta.title || '' }}</span>
           </template>
           <el-menu-item :index="routeChild.name" v-for="routeChild in route.children" :key="routeChild.path">
             <el-icon>
@@ -65,7 +65,7 @@ const defaultMetaInfo = {
 const defaultCollapse = true
 // ----
 
-const isCollapse = computed(() => props.collapse || defaultCollapse)
+const isCollapse = computed(() => props.collapse) //  || defaultCollapse
 
 console.log(route.getRoutes())
 console.log('???')

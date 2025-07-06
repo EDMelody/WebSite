@@ -2,7 +2,7 @@
     meta:
         type: main
         index: 3
-        title: DuyiDemo
+        title: Demo
         sort: 3
         icon: Pear
 </route>

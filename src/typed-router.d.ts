@@ -20,8 +20,8 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/main': RouteRecordInfo<'/main', '/main', Record<never, never>, Record<never, never>>,
-    '/main/duyi': RouteRecordInfo<'/main/duyi', '/main/duyi', Record<never, never>, Record<never, never>>,
-    '/main/duyi/1': RouteRecordInfo<'/main/duyi/1', '/main/duyi/1', Record<never, never>, Record<never, never>>,
+    '/main/demo': RouteRecordInfo<'/main/demo', '/main/demo', Record<never, never>, Record<never, never>>,
+    '/main/demo/form': RouteRecordInfo<'/main/demo/form', '/main/demo/form', Record<never, never>, Record<never, never>>,
     '/main/homepage': RouteRecordInfo<'/main/homepage', '/main/homepage', Record<never, never>, Record<never, never>>,
     '/main/tools': RouteRecordInfo<'/main/tools', '/main/tools', Record<never, never>, Record<never, never>>,
     '/main/tools/generateQrcode': RouteRecordInfo<'/main/tools/generateQrcode', '/main/tools/generateQrcode', Record<never, never>, Record<never, never>>,

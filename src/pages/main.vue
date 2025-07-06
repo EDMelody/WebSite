@@ -16,7 +16,7 @@
 
 <template>
   <div>
-    <SubMenu>
+    <SubMenu :collapse="false">
       <template v-slot:content>
         <RouterView></RouterView>
       </template>

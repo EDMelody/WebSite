@@ -39,20 +39,43 @@ const clickMenuEvent = (i) => {
 #modelpage {
   width: 100%;
   height: 100vh;
+  background-color: #f2f3f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.section{
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // 自动排版
+  gap: 20px;
   width: 80%;
-  height: 90%;
-  background: #fff;
-  @extend .dcc;
-  padding: 10px;
+  max-width: 800px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
-.menu-item{
-  width: 40%;
-  height: 50%;
-  border: 1px solid #000;
-  margin-right: 10px;
-  @extend .dcc;
-  // background-color: rgba(aqua, 0.5);
+
+/* 菜单项样式 */
+.menu-item {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: #e6f0ff;
+    border-color: #91caff;
+    transform: translateY(-2px);
+  }
 }
 </style>
