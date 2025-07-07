@@ -1,1 +1,0 @@
-import{b as e}from"./route-block-B_A1xBdJ.js";import{_ as c,c as r,a as s,g as n,h as a}from"./index-DiOMxrpX.js";const o={},_={class:"fillPage"};function f(i,l){const t=a("router-view");return s(),r("div",_,[n(t)])}typeof e=="function"&&e(o);const d=c(o,[["render",f]]);export{d as default};

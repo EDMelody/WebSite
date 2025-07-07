@@ -1,0 +1,1 @@
+import{b as e}from"./route-block-B_A1xBdJ.js";import{_ as c,c as t,a as s}from"./index-Dj-ncGhb.js";const o={},a={class:"page"};function n(r,_){return s(),t("div",a," 首页-空空如也没想好写啥 ")}typeof e=="function"&&e(o);const p=c(o,[["render",n]]);export{p as default};

@@ -1,0 +1,1 @@
+import{d as o,c as s,a as n,b as e}from"./index-Dj-ncGhb.js";import{b as a}from"./route-block-B_A1xBdJ.js";const c={class:"m-padding"},r=o({__name:"generateQrcode",setup(i){return(d,t)=>(n(),s("div",c,t[0]||(t[0]=[e("div",{class:"main-body"},[e("div",{class:"textarea"}),e("div",{class:"output-pic"})],-1)])))}});typeof a=="function"&&a(r);export{r as default};
