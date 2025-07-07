@@ -8,12 +8,18 @@
 </route>
 
 <template>
-    首页-空空如也没想好写啥
+    <div class="page">
+        首页-空空如也没想好写啥
+    </div>
 </template>
 
 <script setup lang='ts'>
 </script>
 
 <style scope lang='scss'>
-
+// .page{
+//     width: 100%;
+//     height: 100%;
+//     // background-color: bisque;
+// }
 </style>

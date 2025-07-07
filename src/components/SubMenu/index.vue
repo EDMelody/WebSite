@@ -21,14 +21,14 @@
         <el-menu-item  :index="route.name" v-if="route.children.length === 0">
           <el-icon>
           <!-- 使用动态组件加载图标 -->
-            <component :is="route.meta.icon ? `${route.meta.icon}` : 'Menu'" />
+            <component :is="iconMap[route.meta.icon] || Menu" />
           </el-icon>
           <template #title>{{ route.meta.title }}</template>
         </el-menu-item>
         <el-sub-menu :index="route.name" v-else>
           <template #title>
             <el-icon>
-              <component :is="route.meta.icon ? `${route.meta.icon}` : 'Menu'" />
+              <component :is="iconMap[route.meta.icon] || Menu" />
             </el-icon>
             <span>{{ route.meta.title || '' }}</span>
           </template>
@@ -49,6 +49,16 @@
 
 <script setup lang='ts'>
 import { RouteRecordRaw } from 'vue-router'
+import { Pear, Menu, Edit, Setting, Watermelon } from '@element-plus/icons-vue'
+
+const iconMap = {
+  Pear,
+  Menu,
+  Edit,
+  Setting,
+  // Present,
+  Watermelon,
+} as any
 
 const route = useRouter()
 // let isCollapse = ref<boolean>(false)
