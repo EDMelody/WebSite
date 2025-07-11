@@ -9,7 +9,7 @@
 
 <template>
     <div class="page">
-        首页-空空如也没想好写啥
+        none
     </div>
 </template>
 

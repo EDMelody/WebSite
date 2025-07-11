@@ -2,7 +2,7 @@
  * @Author: 
  * @Date: 2025-04-03 17:26:11
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2025-04-09 11:17:18
+ * @LastEditTime: 2025-07-11 11:08:26
  * @FilePath: \vite-app\src\components\SubMenu\index.vue
  * @Description: 侧边栏组件
  * 
@@ -23,7 +23,7 @@
           <!-- 使用动态组件加载图标 -->
             <component :is="iconMap[route.meta.icon] || Menu" />
           </el-icon>
-          <template #title>{{ route.meta.title }}</template>
+          <template #title>{{ route.meta.title || ''}}</template>
         </el-menu-item>
         <el-sub-menu :index="route.name" v-else>
           <template #title>
@@ -36,7 +36,7 @@
             <el-icon>
               <component :is="routeChild.meta.icon ? `${route.meta.icon}` : ''" />
             </el-icon>
-            <template #title>{{ routeChild.meta.title }}</template>
+            <template #title>{{ routeChild.meta.title || '' }}</template>
           </el-menu-item>
         </el-sub-menu>
       </template>
@@ -67,6 +67,7 @@ const props = defineProps({
   collapse: Boolean,
   metaInfo: Object,
 })
+
 // setting default value
 const defaultMetaInfo = {
   type: 'main',
@@ -84,7 +85,7 @@ console.log(menuList)
 if (menuList.length > 0) {
   menuList = menuList.sort((a, b) => a.meta.sort - b.meta.sort)
 }
-
+console.log(menuList)
 onMounted(() => {
   // console.log(route.getRoutes());
   // console.log(menuList);

@@ -22,6 +22,7 @@ declare module 'vue-router/auto-routes' {
     '/main': RouteRecordInfo<'/main', '/main', Record<never, never>, Record<never, never>>,
     '/main/demo': RouteRecordInfo<'/main/demo', '/main/demo', Record<never, never>, Record<never, never>>,
     '/main/demo/form': RouteRecordInfo<'/main/demo/form', '/main/demo/form', Record<never, never>, Record<never, never>>,
+    '/main/demo/temp': RouteRecordInfo<'/main/demo/temp', '/main/demo/temp', Record<never, never>, Record<never, never>>,
     '/main/homepage': RouteRecordInfo<'/main/homepage', '/main/homepage', Record<never, never>, Record<never, never>>,
     '/main/tools': RouteRecordInfo<'/main/tools', '/main/tools', Record<never, never>, Record<never, never>>,
     '/main/tools/generateQrcode': RouteRecordInfo<'/main/tools/generateQrcode', '/main/tools/generateQrcode', Record<never, never>, Record<never, never>>,

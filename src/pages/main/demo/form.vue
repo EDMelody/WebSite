@@ -1,25 +1,32 @@
 <route lang="yaml">
     meta:
-        type: 
+        type: main
         title: 动态表单
 </route>
 
 <template>
     <div class="page">
         <div class="form">
-            <FormBuilder ref="formRef" :formItems="formItems" v-model="formData" :rules="rules"></FormBuilder>
+            <FormBuilder ref="formRef" :formItems="formItems" v-model="formData" :rules="rules">
+                <template #slot>
+                    芜湖起飞
+                </template>
+            </FormBuilder>
             <el-button @click="onSubmit">提交</el-button>
         </div>
     </div>
 </template>
 
 <script setup lang='ts'>
-import FormBuilder from '@/components/FormBuilder/FormBuilder.vue';
+// import FormBuilder from '@/components/FormBuilder/FormBuilder.vue';
+// import HelloWorld from '@/components/TempComponents/HelloWorld.vue'
+import { useFormBuilder } from '@/hooks/useFormBuilder.ts'
 import { useTemplateRef } from 'vue';
 
 const formData = ref({
     name: undefined,
-    age: undefined
+    age: undefined,
+    uuu: undefined
 })
 
 const rules = {
@@ -36,7 +43,7 @@ const rules = {
 // setTimeout(() => {
 //     console.log('formData.value ==>', formData.value)
 // }, 4000)
-/** 支持props 也可以去除props
+/** 支持props 也可以去除props type不传默认是'input'，支持上传自定义组件，slot使用插槽
  *  {
         label: '年龄',
         key: 'age',
@@ -51,7 +58,20 @@ const formItems = computed(() => [
         label: '姓名',
         key: 'name',
         type: 'input',
+        // hidden: true,
         placeholder: '请输入姓名',
+        span: 12,
+        click() {
+            console.log('姓名输入框被点击了');
+        },
+    },
+    {
+        label: '使用组件',
+        key: 'uuu',
+        // type: () => h('div', {}, '自定义组件'), // 也可以这么传
+        // type: HelloWorld,
+        hidden: formData.value.name === '张',
+        placeholder: '请输入',
         click() {
             console.log('姓名输入框被点击了');
         },
@@ -79,6 +99,10 @@ const formItems = computed(() => [
             { label: '女', value: '2'},
             { label: '未知', value: '3'}
         ]
+    },
+    {
+        label: '使用插槽',
+        key: 'slot'
     }
 ])
 const formInstance = useTemplateRef('formRef')
@@ -86,6 +110,12 @@ async function onSubmit () {
     await formInstance.value.validate()
     console.log('成功formData.value ==>', formData.value)
 }
+
+const { FormBuilder, validate } = useFormBuilder({
+    rules,
+    formItems,
+    formData
+})
 </script>
 
 <style scope lang='scss'>
